@@ -485,19 +485,17 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
         if getting_team_name:
             return'MurrayRuhmel'
         else:
-            if len(opponent_history)==0:
+            if len(opponent_history)==0:# for our first time we collude
                 return 'c'
-            elif opponent_history[0]=='c':
+            elif opponent_history[0]=='c':# after that betray. If you collude the first time, they are more likely to trust you.
                 return 'b'
             else:
-                return 'b'
-<<<<<<< HEAD
+                return  'b'
+
                 
                 
                 
                 
-=======
->>>>>>> 54895f7efddb5c639c557fdc98d46164aada209c
     
     
 
