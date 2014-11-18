@@ -491,6 +491,13 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
                 return 'b'
             else:
                 return 'b'
+<<<<<<< HEAD
+                
+                
+                
+                
+=======
+>>>>>>> 54895f7efddb5c639c557fdc98d46164aada209c
     
     
 
