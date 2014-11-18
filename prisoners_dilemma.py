@@ -597,13 +597,13 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
         if getting_team_name:
             return "One step behind you."
         else:
-            if len(opponent_history)==0: #It's the first round: betray
+            if len(opponent_history)==0: #It's the first round: collude
                 return 'c'
             else:
-                if random.randint(1,100)<6 and random.randint(1,100)>=1:
+                if random.randint(1,100)<6 and random.randint(1,100)>=1: #5% of the time collude
                     return 'c'
-                elif len(opponent_history)!=0:
-                    return str(opponent_history[-1]) 
+                elif len(opponent_history)!=0: 
+                    return str(opponent_history[-1]) #Return what the opponent did last time
 
 
 
