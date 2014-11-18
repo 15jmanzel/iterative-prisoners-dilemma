@@ -485,12 +485,17 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
         if getting_team_name:
             return'MurrayRuhmel'
         else:
-            if len(opponent_history)==0:
+            if len(opponent_history)==0:# for our first time we collude
                 return 'c'
-            elif opponent_history[0]=='c':
+            elif opponent_history[0]=='c':# after that betray. If you collude the first time, they are more likely to trust you.
                 return 'b'
             else:
-                return 'b'
+                return  'b'
+
+                
+                
+                
+                
     
     
 
@@ -527,12 +532,12 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
         if getting_team_name:
             return 'Warchol&Donovan'
         else:
-            if random.random()<0.02: 
+            if random.random()<0.02: #Two percent of the time it will collude
                 return 'c'
-            elif random.random()<0.07:
+            elif random.random()<0.07: #Seven percent of the time it will collude
                 return 'c' 
             else:
-                return 'b'
+                return 'b' #It will betray unless it randomly colludes
     
     
 
