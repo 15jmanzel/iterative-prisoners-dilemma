@@ -527,12 +527,12 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
         if getting_team_name:
             return 'Warchol&Donovan'
         else:
-            if random.random()<0.02: 
+            if random.random()<0.02: #Two percent of the time it will collude
                 return 'c'
-            elif random.random()<0.07:
+            elif random.random()<0.07: #Seven percent of the time it will collude
                 return 'c' 
             else:
-                return 'b'
+                return 'b' #It will betray unless it randomly colludes
     
     
 
